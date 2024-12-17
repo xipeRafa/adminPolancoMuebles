@@ -31,7 +31,7 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
 
     let look = localStorage.look?.slice(48, 68);
 
-    console.log(look)
+
 
     const [valueState, setValueState] = useState(look || "");
 
@@ -79,16 +79,16 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
     const handleSales = (id, el) => {
 
 
-        let arrTalla = el.talla
+        // let arrTalla = el.talla
 
-        let indice = arrTalla.indexOf(tallaState); // obtenemos el indice
-        arrTalla.splice(indice, 1);
+        // let indice = arrTalla.indexOf(tallaState); // obtenemos el indice
+        // arrTalla.splice(indice, 1);
 
 
 
         el.takenByCustomer = true;
         //el.tallaComprada = tallaState
-        el.talla = arrTalla
+        // el.talla = arrTalla
 
         if (el.historiSales === undefined) {
 
@@ -108,16 +108,16 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
 
 
 
-        if (el?.stockHermosillo === undefined) {
+        // if (el?.stockHermosillo === undefined) {
 
-                el.stockSanCarlos = el?.stockSanCarlos - 1;
-                UpdateByIdInventario(el.id, el);
+        //         el.stockSanCarlos = el?.stockSanCarlos - 1;
+        //         UpdateByIdInventario(el.id, el);
 
-        } else {
+        // } else {
 
-                el.stockHermosillo = el?.stockHermosillo - 1;
-                UpdateByIdInventario(el.id, el);
-        }
+        //         el.stockHermosillo = el?.stockHermosillo - 1;
+        //         UpdateByIdInventario(el.id, el);
+        // }
 
 
 
@@ -126,8 +126,6 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
             pid : id,
             name : el.name,
             lastSale : dueDate,
-            tallaComprada : tallaState,
-            sucursal : el.sucursal,
             price : el.price,
             efectivo : efectivoState
         }
@@ -138,7 +136,7 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
 
         setTimeout(() => {
             setGetArr(!getArr);
-            setTallaState('')
+            // setTallaState('')
             setNoteState('')
             setEfectivoState('')
         }, 500);

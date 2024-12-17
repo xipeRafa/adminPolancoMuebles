@@ -51,20 +51,20 @@ export default function App() {
 
 
 
-      const [arrOrders, setArrOrders] = useState([])
-      const [getArrOrders, setGetArrOrders] = useState(false)
+    //   const [arrOrders, setArrOrders] = useState([])
+    //   const [getArrOrders, setGetArrOrders] = useState(false)
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const data = collection(db, 'orders')
+    //     const data = collection(db, 'orders')
 
-        getDocs(data).then((resp) => {
-            setArrOrders(resp.docs.map((doc) => ({ ...doc.data(), id: doc.id }) ))
-        }).catch(err=>{
-             console.error(err)
-        })
+    //     getDocs(data).then((resp) => {
+    //         setArrOrders(resp.docs.map((doc) => ({ ...doc.data(), id: doc.id }) ))
+    //     }).catch(err=>{
+    //          console.error(err)
+    //     })
 
-    }, [getArrOrders])
+    // }, [getArrOrders])
 
 
 
