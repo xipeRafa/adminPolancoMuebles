@@ -916,7 +916,7 @@ export default function Inventario({ arr, setGetArr, getArr }) {
                         <p>Fecha: {milisegundosComoFecha(el.duration)}</p>
                         <h3>Nombre: {el.name}</h3>
                         <b>{el.id}</b>
-                        <p>Sucursal: {el.sucursal}</p>
+                        {/*<p>Sucursal: {el.sucursal}</p>*/}
                         <p>Categoria: {el.category}</p>
                         {/*<p>Tela: {el.tela}</p>*/}
 
