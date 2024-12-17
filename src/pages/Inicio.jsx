@@ -31,6 +31,8 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
 
     let look = localStorage.look?.slice(47, 67);
 
+    console.log(look)
+
     const [valueState, setValueState] = useState(look || "");
 
     const handleSearch = (e) => {
