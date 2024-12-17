@@ -90,7 +90,8 @@ export default function Entregados({ arrVentas, setGetArrVentas, getArrVentas}) 
         const[sucursalState, setSucursalState]=useState('')
 
 
-        let sucursales = arrVentasFiltered.filter(el => el.sucursal === sucursalState )
+        // let sucursales = arrVentasFiltered.filter(el => el.sucursal === sucursalState )
+        let sucursales = arrVentasFiltered.filter(el => el.sucursal === 'Hermosillo' )
 
 
         let totalVentasBySucursal = []
@@ -135,7 +136,7 @@ export default function Entregados({ arrVentas, setGetArrVentas, getArrVentas}) 
                     Total en Ventas: $ <span className='total'>{total}</span>
             </p>
 
-            <div className={arrVentasFiltered.length <= 0 ? 'd-none' : 'bg-gray'}>
+        {/*    <div className={arrVentasFiltered.length <= 0 ? 'd-none' : 'bg-gray'}>
 
                 <p>Seleccione una Sucursal</p>
 
@@ -148,23 +149,24 @@ export default function Entregados({ arrVentas, setGetArrVentas, getArrVentas}) 
                         <span className='totalVentas'>{totalVentasBySucursalRender}</span>
                     </p>
                 
-            </div>
+            </div>*/}
         
 
    
             {sucursales.map((el, i) => {
                 console.log(el)
-                return <div key={i} className="item">
+                return <div key={i} className="it">
                     <hr />
 
-                    <div className="texto">
-                        <h3>Sucursal {el.sucursal}</h3>
+                    <div className="tex">
+                        {/*<h3>Sucursal {el.sucursal}</h3>*/}
+                        <h3>Producto: {el.name}</h3> 
+                        <p>Vendedor:{el.email}</p>
                         <p>Fecha de Venta: {milisegundosComoFecha(el.lastSale)}</p>
                         <p>ID: {el.pid}</p>
-                        <p>Producto: {el.name}</p>                      
-                        <p>Talla : { el.tallaComprada}</p>
                         <b>Precio: $ { el.price}</b>
                         <p>Efectivo : { el?.efectivo}</p>
+
                     </div>
 
 

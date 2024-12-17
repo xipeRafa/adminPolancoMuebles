@@ -129,7 +129,8 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
             tallaComprada : tallaState,
             sucursal : el.sucursal,
             price : el.price,
-            efectivo : efectivoState
+            efectivo : efectivoState,
+            vendedor:el.email
         }
 
 
