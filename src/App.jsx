@@ -128,7 +128,7 @@ export default function App() {
     <div className='containerApp'>
         <br />
         <div className="titleLogo">
-          <h2 className="w50">Polanco Admin System</h2>
+          <h2 className="w50">Polanco Muebles Admin System</h2>
       </div>
       <Navbar />
 

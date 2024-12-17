@@ -119,13 +119,15 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
         //         UpdateByIdInventario(el.id, el);
         // }
 
-
+        UpdateByIdInventario(el.id, el);
 
 
         let ventas = {
             pid : id,
             name : el.name,
             lastSale : dueDate,
+            tallaComprada : tallaState,
+            sucursal : el.sucursal,
             price : el.price,
             efectivo : efectivoState
         }
@@ -136,7 +138,7 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
 
         setTimeout(() => {
             setGetArr(!getArr);
-            // setTallaState('')
+            setTallaState('')
             setNoteState('')
             setEfectivoState('')
         }, 500);
