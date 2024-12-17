@@ -29,7 +29,7 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
 
 
 
-    let look = localStorage.look?.slice(47, 67);
+    let look = localStorage.look?.slice(48, 68);
 
     console.log(look)
 
