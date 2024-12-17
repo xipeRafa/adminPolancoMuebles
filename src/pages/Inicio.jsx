@@ -130,7 +130,7 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
             sucursal : el.sucursal,
             price : el.price,
             efectivo : efectivoState,
-            vendedor:el.email
+            vendedor:localStorage.userEmailLS
         }
 
 
