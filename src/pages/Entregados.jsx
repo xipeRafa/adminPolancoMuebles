@@ -161,7 +161,7 @@ export default function Entregados({ arrVentas, setGetArrVentas, getArrVentas}) 
                     <div className="tex">
                         {/*<h3>Sucursal {el.sucursal}</h3>*/}
                         <h3>Producto: {el.name}</h3> 
-                        <p>Vendedor:{el.vendedor}</p>
+                        <p>Vendedor: {el.vendedor}</p>
                         <p>Fecha de Venta: {milisegundosComoFecha(el.lastSale)}</p>
                         <p>ID: {el.pid}</p>
                         <b>Precio: $ { el.price}</b>
