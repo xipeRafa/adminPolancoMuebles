@@ -238,7 +238,7 @@ export default function Inicio({arr, setGetArr, getArr, UpdateByIdInventario, po
 
                     <button
                         disabled={el?.stockSanCarlos < 1 || el?.stockHermosillo < 1 ? true : false}
-                        style={{ backgroundColor: "yellow" }}
+                        style={{ backgroundColor: "orange" }}
                         onClick={() => {
 
                             // if(tallaState.length <= 0){

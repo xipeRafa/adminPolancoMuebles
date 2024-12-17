@@ -915,7 +915,7 @@ export default function Inventario({ arr, setGetArr, getArr }) {
                     <div className="texto">
                         <p>Fecha: {milisegundosComoFecha(el.duration)}</p>
                         <h3>Nombre: {el.name}</h3>
-                        <b>{el.id}</b>
+                        <p>{el.id}</p>
                         {/*<p>Sucursal: {el.sucursal}</p>*/}
                         <p>Categoria: {el.category}</p>
                         {/*<p>Tela: {el.tela}</p>*/}
@@ -923,7 +923,7 @@ export default function Inventario({ arr, setGetArr, getArr }) {
 
                         {el?.historiSales?.map((fecha, i) => {
                                 return (
-                                        <p key={i} style={{ backgroundColor: "yellow" }}>
+                                        <p key={i} style={{ backgroundColor: "orange" }}>
                                                 Venta {i + 1}.- {milisegundosComoFecha(fecha)}
                                         </p>
                                 );
@@ -932,7 +932,7 @@ export default function Inventario({ arr, setGetArr, getArr }) {
                         {el?.notaDeVenta?.map((nota, i) => {
                                 return (
                                         <p key={i}>
-                                                Nota de Venta {i + 1}: <b>No. {nota}</b>
+                                                Nota de Venta {i + 1}: <span>No. {nota}</span>
                                         </p>
                                 );
                         })}
